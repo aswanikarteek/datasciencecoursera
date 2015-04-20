@@ -1,0 +1,17 @@
+{
+    "contents" : "makeCacheMatrix <- function( m = matrix() ) {\n        \n        ## Initialize the inverse property\n        i <- NULL\n        set <- function( matrix ) {\n                m <<- matrix\n                i <<- NULL\n        }\n        ## Method the get the matrix\n        get <- function() {\n                ## Return the matrix\n                m\n        }\n        ## Way to set the inverse of the matrix\n        setInverse <- function(inverse) {\n                i <<- inverse\n        }\n        \n        ## Way to get the inverse of the matrix\n        getInverse <- function() {\n                ## Back the inverse property\n                i\n        }\n        ## Back a list of the methods\n        list(set = set, get = get,\n             setInverse = setInverse,\n             getInverse = getInverse)\n}\n## Compute the inverse of the unique matrix back by \"makeCacheMatrix\"\n## Back to a matrix  “m”\nm <- x$getInverse()\nif( !is.null(m) ) {\n        message(\"getting cached data\")\n        return(m)\n}\n## Compute the inverse via matrix multiplication\nm <- solve(data) %*% data\n## Set the inverse to the object\nx$setInverse(m)\n## Coming back the matrix\nm\n}\n\n",
+    "created" : 1429553774092.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "2723786839",
+    "id" : "2214D249",
+    "lastKnownWriteTime" : 72101576739913859,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
